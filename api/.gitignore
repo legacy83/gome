@@ -1,4 +1,0 @@
-# - Composer Ignores
-# -----------------------------------------
-vendor
-composer.lock
