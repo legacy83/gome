@@ -2,7 +2,7 @@
 
 $config = [
 
-    'id' => 'mazoo-console',
+    'id' => 'gome-console',
     'basePath' => dirname( __DIR__ ),
     'controllerNamespace' => 'console\\commands',
     'bootstrap' => [ 'log' ],

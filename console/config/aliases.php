@@ -1,4 +1,4 @@
 <?php
 
 Yii::setAlias( 'console', dirname( __DIR__ ) );
-Yii::setAlias( 'api', dirname( dirname( __DIR__ ) ) . '/api' );
+Yii::setAlias( 'www', dirname( dirname( __DIR__ ) ) . '/www' );
