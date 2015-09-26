@@ -26,29 +26,10 @@ rm -rf "/var/www/www.$domain/public_html"
 ln -s /vagrant/www/web "/var/www/www.$domain/public_html"
 
 ##########################################
-# API Project Setup
-##########################################
-
-echo "$apache2AddVhost" | bash -s "api.$domain"
-
-rm -rf "/var/www/api.$domain/public_html"
-ln -s /vagrant/api/web "/var/www/api.$domain/public_html"
-
-##########################################
 # Console Project Setup
 ##########################################
 
-echo "$mySQLCreateDB" | bash -s "mazoo"
-
-##########################################
-# Sample Project Setup
-##########################################
-
-#echo "$mySQLCreateDB" | bash -s "sample"
-#echo "$apache2AddVhost" | bash -s "sample.$domain"
-
-#rm -rf "/var/www/sample.$domain/public_html"
-#ln -s /vagrant/projects/sample "/var/www/sample.$domain/public_html"
+echo "$mySQLCreateDB" | bash -s "gome"
 
 ##########################################
 # Apache2 Reload
