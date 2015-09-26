@@ -1,0 +1,14 @@
+{
+  "name": "trsenna/yuba",
+  "description": "Yuba Project Template is a skeleton Yii2 application best for rapidly creating amazing and well done projects.",
+  "require": {
+    "php": ">=5.5.9",
+    "yiisoft/yii2": ">=2.0.4"
+  },
+  "extra": {
+    "asset-installer-paths": {
+      "npm-asset-library": "vendor/npm",
+      "bower-asset-library": "vendor/bower"
+    }
+  }
+}
