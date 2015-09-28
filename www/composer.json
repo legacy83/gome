@@ -3,7 +3,7 @@
   "description": "Yuba Project Template is a skeleton Yii2 application best for rapidly creating amazing and well done projects.",
   "require": {
     "php": ">=5.5.9",
-    "yiisoft/yii2": ">=2.0.4"
+    "yiisoft/yii2": ">=2.0.6"
   },
   "extra": {
     "asset-installer-paths": {

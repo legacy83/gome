@@ -6,9 +6,9 @@
 
 domain='192.168.27.14.xip.io'
 
-apache2AddVhost="$(curl -sS https://raw.githubusercontent.com/trsenna/gozma14-cookbook/0.4.0/book/stuff/apache2/addVhost.sh)"
-apache2Add301Redirect="$(curl -sS https://raw.githubusercontent.com/trsenna/gozma14-cookbook/0.4.0/book/stuff/apache2/add301Redirect.sh)"
-mySQLCreateDB="$(curl -sS https://raw.githubusercontent.com/trsenna/gozma14-cookbook/0.4.0/book/stuff/mySQL/createDB.sh)"
+apache2AddVhost="$(curl -sS https://raw.githubusercontent.com/trsenna/gozma14/0.5.0/cli/stuff/apache2/addVhost.sh)"
+apache2Add301Redirect="$(curl -sS https://raw.githubusercontent.com/trsenna/gozma14/0.5.0/cli/stuff/apache2/add301Redirect.sh)"
+mySQLCreateDB="$(curl -sS https://raw.githubusercontent.com/trsenna/gozma14/0.5.0/cli/stuff/mySQL/createDB.sh)"
 
 ##########################################
 # WWW Setup
