@@ -20,8 +20,8 @@ class AppAsset extends AssetBundle
 
     public function registerAssetFiles( $view )
     {
-        $view->registerCssFile( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' );
-        $view->registerJsFile( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js' );
+        $view->registerCssFile( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' );
+        $view->registerJsFile( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js' );
         parent::registerAssetFiles( $view );
     }
 }

@@ -2,7 +2,7 @@
 
 $config = [
 
-    'id' => 'yuba',
+    'id' => 'gome-www',
     'basePath' => dirname( __DIR__ ),
     'bootstrap' => [ 'log' ],
 
