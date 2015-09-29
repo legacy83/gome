@@ -2,7 +2,7 @@
 
 $config = [
 
-    'id' => 'gome-www',
+    'id' => 'www',
     'basePath' => dirname( __DIR__ ),
     'bootstrap' => [ 'log' ],
 

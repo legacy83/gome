@@ -2,7 +2,7 @@
 
 $config = [
 
-    'id' => 'gome-console',
+    'id' => 'console',
     'basePath' => dirname( __DIR__ ),
     'controllerNamespace' => 'console\\commands',
     'bootstrap' => [ 'log' ],
