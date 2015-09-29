@@ -34,9 +34,9 @@
                     <td>@three</td>
                     <td>
 
-                        <a href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/show', 'id' => $model->id ] ); ?>"><span class="glyphicon glyphicon-link"></span></a>
-                        <a href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/edit', 'id' => $model->id ] ); ?>"><span class="glyphicon glyphicon-edit"></span></a>
-                        <a href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/destroy', 'id' => $model->id ] ); ?>"><span class="glyphicon glyphicon-remove"></span></a>
+                        <a href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/show', 'id' => $model->id ] ); ?>"><span class="glyphicon glyphicon-eye-open"></span></a>
+                        <a href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/edit', 'id' => $model->id ] ); ?>"><span class="glyphicon glyphicon-pencil"></span></a>
+                        <a href="<?= \yii\helpers\Url::toRoute( [ '/scaffold/foo/destroy', 'id' => $model->id ] ); ?>"><span class="glyphicon glyphicon-trash"></span></a>
 
                     </td>
                 </tr>

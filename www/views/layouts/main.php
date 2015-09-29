@@ -25,7 +25,7 @@
             </button>
             <a class="navbar-brand brand" href="<?= Yii::$app->homeUrl; ?>">
                 <i class="glyphicon glyphicon-home"></i>
-                <span>Yuba</span>
+                <span>Gome</span>
             </a>
         </div>
         <div class="collapse navbar-collapse">
@@ -50,7 +50,7 @@
     <hr>
 
     <footer>
-        <p>&copy; Yuba <?php echo date( 'Y' ); ?></p>
+        <p>&copy; Gome <?php echo date( 'Y' ); ?></p>
     </footer>
 
 </div>

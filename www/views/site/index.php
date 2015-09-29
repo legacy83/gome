@@ -1,14 +1,14 @@
 <?php /* @var $this yii\web\View */ ?>
-<?php $this->title = 'Yuba'; ?>
+<?php $this->title = 'Gome'; ?>
 
 <div class="jumbotron">
 
-    <h1>Welcome to Yuba</h1>
+    <h1>Welcome to Gome</h1>
 
     <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus
         commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 
-    <p><a class="btn btn-success btn-lg" href="https://github.com/trsenna/yuba" target="_blank">Just fork Yuba today</a></p>
+    <p><a class="btn btn-success btn-lg" href="https://github.com/trsenna/gome" target="_blank">Just fork Gome today</a></p>
 
 </div>
 
