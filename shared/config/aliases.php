@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Application Aliases
+ * Aliases
  */
 
 $base = dirname( dirname( __DIR__ ) );
@@ -13,4 +13,4 @@ Yii::setAlias( 'www', "{$base}/www" );
  */
 
 Yii::setAlias( 'shared', "{$base}/shared" );
-Yii::setAlias( 'scaffold', '@www/modules/scaffold' );
+Yii::setAlias( 'scaffold', '@shared/modules/scaffold' );
