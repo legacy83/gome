@@ -4,6 +4,7 @@ $config = [
 
     'id' => 'www',
     'basePath' => dirname( __DIR__ ),
+    'vendorPath' => \Yii::getAlias('@shared/vendor'),
     'bootstrap' => [ 'log' ],
 
     /*
@@ -78,6 +79,7 @@ $config = [
             'class' => 'scaffold\Module',
         ],
     ],
+
 ];
 
 return $config;
