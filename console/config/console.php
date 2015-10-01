@@ -4,7 +4,7 @@ $config = [
 
     'id' => 'console',
     'basePath' => dirname( __DIR__ ),
-    'controllerNamespace' => 'console\\commands',
+    'controllerNamespace' => 'console\\controllers',
     'bootstrap' => [ 'log' ],
 
     /*
