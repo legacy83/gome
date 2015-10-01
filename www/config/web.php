@@ -1,13 +1,9 @@
 <?php
 
-$sharedConfigPath = \Yii::getAlias( '@shared/config' );
-$sharedVendorPath = \Yii::getAlias( '@shared/vendor' );
-
 $config = [
 
     'id' => 'www',
     'basePath' => dirname( __DIR__ ),
-    'vendorPath' => $sharedVendorPath,
     'bootstrap' => [ 'log' ],
 
     /*
@@ -28,6 +24,7 @@ $config = [
              */
 
             'cookieValidationKey' => 'W8p?(G4k32p@S5M',
+
         ],
 
         /*
@@ -60,18 +57,7 @@ $config = [
             ],
         ],
 
-        /*
-         * components/db
-         */
-
-        'db' => require( "$sharedConfigPath/db.php" ),
     ],
-
-    /*
-     * params
-     */
-
-    'params' => require( "$sharedConfigPath/params.php" ),
 
     /*
      * modules

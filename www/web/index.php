@@ -7,5 +7,9 @@ require( __DIR__ . '/../../shared/vendor/autoload.php' );
 require( __DIR__ . '/../../shared/vendor/yiisoft/yii2/Yii.php' );
 require( __DIR__ . '/../../shared/config/bootstrap.php' );
 
-$config = require( __DIR__ . '/../config/web.php' );
+$config = yii\helpers\ArrayHelper::merge(
+    require( __DIR__ . '/../../shared/config/main.php' ),
+    require( __DIR__ . '/../config/web.php' )
+);
+
 ( new yii\web\Application( $config ) )->run();
