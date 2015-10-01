@@ -12,16 +12,12 @@ class AppAsset extends AssetBundle
         'css/site.css',
     ];
     public $js = [
+        // ...
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\web\JqueryAsset',
+        'yii\bootstrap\BootstrapAsset',
+        'yii\bootstrap\BootstrapPluginAsset'
     ];
-
-    public function registerAssetFiles( $view )
-    {
-        $view->registerCssFile( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css' );
-        $view->registerJsFile( 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js' );
-        parent::registerAssetFiles( $view );
-    }
 }

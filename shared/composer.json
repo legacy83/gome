@@ -3,7 +3,8 @@
   "description": "Gome Project is an advanced skeleton Yii2 application best for rapidly creating amazing and well done projects.",
   "require": {
     "php": ">=5.5.9",
-    "yiisoft/yii2": ">=2.0.6"
+    "yiisoft/yii2": ">=2.0.6",
+    "yiisoft/yii2-bootstrap": "*"
   },
   "extra": {
     "asset-installer-paths": {
