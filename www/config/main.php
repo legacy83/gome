@@ -2,8 +2,9 @@
 
 $config = [
 
-    'id' => 'www',
+    'id' => 'front',
     'basePath' => dirname( __DIR__ ),
+    'controllerNamespace' => 'front\\controllers',
     'bootstrap' => [ 'log' ],
 
     /*

@@ -1,6 +1,6 @@
 <?php /* @var $this \yii\web\View */ ?>
 <?php /* @var $content string */ ?>
-<?php \app\assets\AppAsset::register( $this ); ?>
+<?php \front\assets\AppAsset::register( $this ); ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language; ?>">
