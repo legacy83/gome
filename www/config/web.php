@@ -1,10 +1,13 @@
 <?php
 
+$sharedConfigPath = \Yii::getAlias( '@shared/config' );
+$sharedVendorPath = \Yii::getAlias( '@shared/vendor' );
+
 $config = [
 
     'id' => 'www',
     'basePath' => dirname( __DIR__ ),
-    'vendorPath' => \Yii::getAlias('@shared/vendor'),
+    'vendorPath' => $sharedVendorPath,
     'bootstrap' => [ 'log' ],
 
     /*
@@ -61,14 +64,14 @@ $config = [
          * components/db
          */
 
-        'db' => require( __DIR__ . '/db.php' ),
+        'db' => require( "$sharedConfigPath/db.php" ),
     ],
 
     /*
      * params
      */
 
-    'params' => require( __DIR__ . '/params.php' ),
+    'params' => require( "$sharedConfigPath/params.php" ),
 
     /*
      * modules
