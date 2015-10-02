@@ -11,25 +11,35 @@ apache2Add301Redirect="$(curl -sS https://raw.githubusercontent.com/trsenna/gozm
 mySQLCreateDB="$(curl -sS https://raw.githubusercontent.com/trsenna/gozma14/0.5.0/cli/stuff/mySQL/createDB.sh)"
 
 ##########################################
-# WWW Setup
+# Apache2 Setup
 ##########################################
 
 echo "$apache2AddVhost" | bash -s "$domain"
 echo "$apache2AddVhost" | bash -s "www.$domain"
 echo "$apache2Add301Redirect" | bash -s "$domain" "www.$domain"
 
+echo "$apache2AddVhost" | bash -s "api.$domain"
+echo "$apache2AddVhost" | bash -s "admin.$domain"
+
 ##########################################
-# Front Project Setup
+# MySQL Setup
+##########################################
+
+echo "$mySQLCreateDB" | bash -s "gome"
+
+##########################################
+# Front Setup
 ##########################################
 
 rm -rf "/var/www/www.$domain/public_html"
 ln -s /vagrant/www/web "/var/www/www.$domain/public_html"
 
 ##########################################
-# Console Project Setup
+# Back Setup
 ##########################################
 
-echo "$mySQLCreateDB" | bash -s "gome"
+rm -rf "/var/www/admin.$domain/public_html"
+ln -s /vagrant/admin/web "/var/www/admin.$domain/public_html"
 
 ##########################################
 # Apache2 Reload
