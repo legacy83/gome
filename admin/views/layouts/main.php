@@ -15,9 +15,7 @@
 
 <?php $this->beginBody(); ?>
 
-<?php \back\components\bootstrap\DashboardNavBar::begin(); ?>
-<?= \back\components\bootstrap\DashboardNav::widget(); ?>
-<?php \back\components\bootstrap\DashboardNavBar::end(); ?>
+<?= \back\components\bootstrap\DashboardTopNavBar::widget(); ?>
 
 <div class="container">
 
