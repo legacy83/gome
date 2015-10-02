@@ -15,8 +15,8 @@
 
 <?php $this->beginBody(); ?>
 
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
@@ -24,8 +24,8 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand brand" href="<?= Yii::$app->homeUrl; ?>">
-                <i class="glyphicon glyphicon-home"></i>
-                <span>Gome</span>
+                <i class="glyphicon glyphicon-wrench"></i>
+                <span>Gome Dashboard</span>
             </a>
         </div>
         <div class="collapse navbar-collapse">
