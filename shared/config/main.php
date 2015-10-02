@@ -2,7 +2,7 @@
 
 return [
 
-    'vendorPath' => dirname( __DIR__ ) . '/vendor',
+    'vendorPath' => dirname( dirname( __DIR__ ) ) . '/vendor',
 
     /*
      * components
