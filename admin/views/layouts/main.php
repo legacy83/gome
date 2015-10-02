@@ -15,7 +15,19 @@
 
 <?php $this->beginBody(); ?>
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<?php
+$brandLabel = 'Gome Dashboard';
+$brandIcon = "<i class=\"glyphicon glyphicon-wrench\"></i>&nbsp;";
+\yii\bootstrap\NavBar::begin( [
+    'brandLabel' => "{$brandIcon}<span>{$brandLabel}</span>",
+    'options' => [ 'class' => 'navbar-default navbar-fixed-top', ],
+    'innerContainerOptions' => [ 'class' => 'container-fluid' ],
+] );
+?>
+
+<?php \yii\bootstrap\NavBar::end(); ?>
+
+<nav class="navbar navbar-inverse navbar-fixed-top hidden" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
