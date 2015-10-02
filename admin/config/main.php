@@ -5,6 +5,7 @@ $config = [
     'id' => 'back',
     'basePath' => dirname( __DIR__ ),
     'controllerNamespace' => 'back\\controllers',
+    'defaultRoute' => 'admin',
     'bootstrap' => [ 'log' ],
 
     /*
@@ -41,7 +42,7 @@ $config = [
          */
 
         'errorHandler' => [
-            'errorAction' => 'site/error',
+            'errorAction' => 'admin/error',
         ],
 
         /*
