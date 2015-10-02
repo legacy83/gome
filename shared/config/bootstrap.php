@@ -7,8 +7,9 @@ Yii::setAlias( 'shared', "{$base}/shared" );
  * app aliases
  */
 
-Yii::setAlias( 'console', "{$base}/console" );
 Yii::setAlias( 'front', "{$base}/www" );
+Yii::setAlias( 'back', "{$base}/admin" );
+Yii::setAlias( 'console', "{$base}/console" );
 
 /*
  * module aliases
