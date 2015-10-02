@@ -5,6 +5,7 @@ $config = [
     'id' => 'front',
     'basePath' => dirname( __DIR__ ),
     'controllerNamespace' => 'front\\controllers',
+    'defaultRoute' => 'site',
     'bootstrap' => [ 'log' ],
 
     /*
@@ -12,6 +13,15 @@ $config = [
      */
 
     'components' => [
+
+        /*
+         * components/urlManager
+         */
+
+        'urlManager' => [
+            'enablePrettyUrl' => TRUE,
+            'showScriptName' => FALSE,
+        ],
 
         /*
          * components/request
