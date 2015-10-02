@@ -6,7 +6,7 @@ use yii\base\Widget;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 
-class DashboardTopNavBar extends Widget
+class DashboardNavBar extends Widget
 {
     public $brandLabel = 'Gome Dashboard';
 

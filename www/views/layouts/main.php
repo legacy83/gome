@@ -15,7 +15,7 @@
 
 <?php $this->beginBody(); ?>
 
-<?= \front\components\bootstrap\SiteTopNavBar::widget(); ?>
+<?= \front\components\bootstrap\SiteNavBar::widget(); ?>
 
 <div class="container">
 

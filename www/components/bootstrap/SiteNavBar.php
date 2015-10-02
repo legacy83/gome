@@ -6,7 +6,7 @@ use yii\base\Widget;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 
-class SiteTopNavBar extends Widget
+class SiteNavBar extends Widget
 {
     public $brandLabel = 'Gome';
 
