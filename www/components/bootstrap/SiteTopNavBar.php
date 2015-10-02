@@ -27,14 +27,6 @@ class SiteTopNavBar extends Widget
         echo Nav::widget( [
             'items' => [
                 [ 'label' => 'About', 'url' => [ '/scaffold/to-do' ] ],
-            ],
-            'options' => [
-                'class' => 'navbar-nav navbar-left',
-            ],
-        ] );
-
-        echo Nav::widget( [
-            'items' => [
                 [ 'label' => '@todo', 'url' => [ '/scaffold/to-do' ] ],
             ],
             'options' => [
