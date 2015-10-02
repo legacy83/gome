@@ -1,10 +1,10 @@
 <?php
 
-namespace back\assets;
+namespace front\assets;
 
 use yii\web\AssetBundle;
 
-class AppAsset extends AssetBundle
+class SiteAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
