@@ -19,8 +19,6 @@
 
 <div class="container">
 
-    <?= $this->render( 'partials/flash-messages.php' ); ?>
-
     <?= $content; ?>
 
     <hr>
