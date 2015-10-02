@@ -5,7 +5,7 @@ namespace back\controllers;
 use Yii;
 use yii\web\Controller;
 
-class AdminController extends Controller
+class DashboardController extends Controller
 {
     public function actions()
     {

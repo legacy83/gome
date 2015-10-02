@@ -5,7 +5,7 @@ $config = [
     'id' => 'back',
     'basePath' => dirname( __DIR__ ),
     'controllerNamespace' => 'back\\controllers',
-    'defaultRoute' => 'admin',
+    'defaultRoute' => 'dashboard',
     'bootstrap' => [ 'log' ],
 
     /*
