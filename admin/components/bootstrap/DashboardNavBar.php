@@ -9,19 +9,17 @@ use yii\bootstrap\NavBar;
 class DashboardNavBar extends Widget
 {
     public $brandLabel = 'Gome Dashboard';
+    public $brandLabelIcon = '<i class="glyphicon glyphicon-wrench"></i>';
+    public $brandLabelFormat = '%s&nbsp;<span>%s</span>';
+    public $navBarOptions = [
+        'class' => 'navbar-default navbar-fixed-top',
+    ];
 
     public function run()
     {
-        $brandLabel = implode( '&nbsp;', [
-            '<i class="glyphicon glyphicon-wrench"></i>',
-            "<span>{$this->brandLabel}</span>",
-        ] );
-
         NavBar::begin( [
-            'brandLabel' => $brandLabel,
-            'options' => [
-                'class' => 'navbar-default navbar-fixed-top',
-            ],
+            'brandLabel' => sprintf( $this->brandLabelFormat, $this->brandLabelIcon, $this->brandLabel ),
+            'options' => $this->navBarOptions,
         ] );
 
         echo Nav::widget( [
