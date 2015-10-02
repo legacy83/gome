@@ -15,24 +15,9 @@
 
 <?php $this->beginBody(); ?>
 
-<?php
-$brandLabel = 'Gome Dashboard';
-$brandIcon = "<i class=\"glyphicon glyphicon-wrench\"></i>&nbsp;";
-\yii\bootstrap\NavBar::begin( [
-    'brandLabel' => "{$brandIcon}<span>{$brandLabel}</span>",
-    'options' => [ 'class' => 'navbar-default navbar-fixed-top', ],
-] );
-
-echo \yii\bootstrap\Nav::widget( [
-    'options' => [ 'class' => 'navbar-nav navbar-right' ],
-    'items' => [
-        [ 'label' => '@todo', 'url' => [ '/scaffold/to-do' ] ],
-        [ 'label' => '@foo', 'url' => [ '/scaffold/foo' ] ],
-    ],
-] );
-
-\yii\bootstrap\NavBar::end();
-?>
+<?php \back\components\bootstrap\DashboardNavBar::begin(); ?>
+<?= \back\components\bootstrap\DashboardNav::widget(); ?>
+<?php \back\components\bootstrap\DashboardNavBar::end(); ?>
 
 <div class="container">
 
