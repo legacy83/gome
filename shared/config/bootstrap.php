@@ -17,4 +17,3 @@ Yii::setAlias( 'console', "{$base}/console" );
  */
 
 Yii::setAlias( 'common', '@shared/modules/common' );
-Yii::setAlias( 'scaffold', '@shared/modules/scaffold' );

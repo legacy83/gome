@@ -15,8 +15,8 @@ class DashboardSecondaryNav extends Widget
     {
         echo Nav::widget( [
             'items' => [
-                [ 'label' => '@todo', 'url' => [ '/scaffold/todo/index' ] ],
-                [ 'label' => '@foo', 'url' => [ '/scaffold/foo/index' ] ],
+                [ 'label' => '@todo', 'url' => [ '/todo/index' ] ],
+                [ 'label' => '@foo', 'url' => [ '/foo/index' ] ],
             ],
             'options' => $this->navOptions,
         ] );
