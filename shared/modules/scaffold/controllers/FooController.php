@@ -9,13 +9,8 @@ class FooController extends Controller
 {
     public function actionIndex()
     {
-        $foos = array();
-        foreach ( range( 1, 6 ) as $id ) {
-            $foos[ ] = Foo::buildFromId( $id );
-        }
-
         return $this->render( 'index', [
-            'models' => $foos,
+            'models' => Foo::find()->all(),
         ] );
     }
 
@@ -23,12 +18,8 @@ class FooController extends Controller
     {
         $request = \Yii::$app->request;
 
-        $foo = Foo::buildFromId(
-            $request->get( 'id' )
-        );
-
         return $this->render( 'show', [
-            'model' => $foo,
+            'model' => Foo::findOne( $request->get( 'id' ) ),
         ] );
     }
 
@@ -65,12 +56,8 @@ class FooController extends Controller
             return $this->redirect( [ '/scaffold/foo' ] );
         }
 
-        $foo = Foo::buildFromId(
-            $request->get( 'id' )
-        );
-
         return $this->render( 'edit', [
-            'model' => $foo,
+            'model' => Foo::findOne( $request->get( 'id' ) ),
         ] );
     }
 
@@ -89,12 +76,8 @@ class FooController extends Controller
             return $this->redirect( [ '/scaffold/foo' ] );
         }
 
-        $foo = Foo::buildFromId(
-            $request->get( 'id' )
-        );
-
         return $this->render( 'destroy', [
-            'model' => $foo,
+            'model' => Foo::findOne( $request->get( 'id' ) ),
         ] );
     }
 }

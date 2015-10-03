@@ -4,7 +4,7 @@ namespace scaffold\controllers;
 
 use yii\web\Controller;
 
-class ToDoController extends Controller
+class TodoController extends Controller
 {
     public function actionIndex()
     {
