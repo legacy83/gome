@@ -75,8 +75,8 @@ $config = [
      */
 
     'modules' => [
-        'scaffold' => [
-            'class' => 'scaffold\Module',
+        'common' => [
+            'class' => 'common\Module',
         ],
     ],
 

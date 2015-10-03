@@ -66,6 +66,9 @@ $config = [
      */
 
     'modules' => [
+        'common' => [
+            'class' => 'common\Module',
+        ],
         'v01' => [
             'class' => 'api\modules\v01\Module',
         ],
