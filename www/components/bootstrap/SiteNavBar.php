@@ -3,7 +3,6 @@
 namespace front\components\bootstrap;
 
 use yii\base\Widget;
-use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 
 class SiteNavBar extends Widget
@@ -22,14 +21,8 @@ class SiteNavBar extends Widget
             'options' => $this->navBarOptions,
         ] );
 
-        echo Nav::widget( [
-            'items' => [
-                [ 'label' => '@todo', 'url' => [ '/scaffold/to-do/index' ] ],
-            ],
-            'options' => [
-                'class' => 'navbar-nav navbar-right',
-            ],
-        ] );
+        echo SitePrimaryNav::widget();
+        echo SiteSecondaryNav::widget();
 
         NavBar::end();
     }

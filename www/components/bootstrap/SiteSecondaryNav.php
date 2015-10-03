@@ -1,11 +1,11 @@
 <?php
 
-namespace back\components\bootstrap;
+namespace front\components\bootstrap;
 
 use yii\base\Widget;
 use yii\bootstrap\Nav;
 
-class DashboardSecondaryNav extends Widget
+class SiteSecondaryNav extends Widget
 {
     public $navOptions = [
         'class' => 'navbar-nav navbar-right',
@@ -16,7 +16,6 @@ class DashboardSecondaryNav extends Widget
         echo Nav::widget( [
             'items' => [
                 [ 'label' => '@todo', 'url' => [ '/scaffold/to-do/index' ] ],
-                [ 'label' => '@foo', 'url' => [ '/scaffold/foo/index' ] ],
             ],
             'options' => $this->navOptions,
         ] );
