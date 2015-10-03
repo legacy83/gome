@@ -29,7 +29,7 @@ class FooController extends Controller
         $session = \Yii::$app->session;
 
         if ( $request->post( 'createSubmitCreate' ) ) {
-            $session->setFlash( 'success', '@foo created successfully' );
+            $session->addFlash( 'success', '@foo created successfully' );
 
             return $this->redirect( [ '/foo' ] );
         }
@@ -47,7 +47,7 @@ class FooController extends Controller
         $session = \Yii::$app->session;
 
         if ( $request->post( 'editSubmitSave' ) ) {
-            $session->setFlash( 'success', '@foo modified successfully' );
+            $session->addFlash( 'success', '@foo modified successfully' );
 
             return $this->redirect( [ '/foo' ] );
         }
@@ -67,7 +67,7 @@ class FooController extends Controller
         $session = \Yii::$app->session;
 
         if ( $request->post( 'destroySubmitYes' ) ) {
-            $session->setFlash( 'success', '@foo destroyed successfully' );
+            $session->addFlash( 'success', '@foo destroyed successfully' );
 
             return $this->redirect( [ '/foo' ] );
         }
