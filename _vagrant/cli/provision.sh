@@ -42,6 +42,13 @@ rm -rf "/var/www/admin.$domain/public_html"
 ln -s /vagrant/admin/web "/var/www/admin.$domain/public_html"
 
 ##########################################
+# API Setup
+##########################################
+
+rm -rf "/var/www/api.$domain/public_html"
+ln -s /vagrant/api/web "/var/www/api.$domain/public_html"
+
+##########################################
 # Apache2 Reload
 ##########################################
 
