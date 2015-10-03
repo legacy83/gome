@@ -24,7 +24,6 @@ $config = [
             'enableStrictParsing' => FALSE,
             'rules' => [
                 [ 'class' => 'yii\rest\UrlRule', 'controller' => 'foo', 'pluralize' => FALSE ],
-                [ 'class' => 'yii\rest\UrlRule', 'controller' => 'todo', 'pluralize' => FALSE ],
             ],
         ],
 
