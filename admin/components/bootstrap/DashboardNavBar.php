@@ -3,12 +3,11 @@
 namespace back\components\bootstrap;
 
 use yii\base\Widget;
-use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 
 class DashboardNavBar extends Widget
 {
-    public $brandLabel = 'Gome Dashboard';
+    public $brandLabel = 'Gome';
     public $brandLabelIcon = '<i class="glyphicon glyphicon-wrench"></i>';
     public $brandLabelFormat = '%s&nbsp;<span>%s</span>';
     public $navBarOptions = [
@@ -22,15 +21,8 @@ class DashboardNavBar extends Widget
             'options' => $this->navBarOptions,
         ] );
 
-        echo Nav::widget( [
-            'items' => [
-                [ 'label' => '@todo', 'url' => [ '/scaffold/to-do/index' ] ],
-                [ 'label' => '@foo', 'url' => [ '/scaffold/foo/index' ] ],
-            ],
-            'options' => [
-                'class' => 'navbar-nav navbar-right',
-            ],
-        ] );
+        echo DashboardPrimaryNav::widget();
+        echo DashboardSecondaryNav::widget();
 
         NavBar::end();
     }
