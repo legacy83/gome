@@ -24,8 +24,8 @@ class DashboardNavBar extends Widget
 
         echo Nav::widget( [
             'items' => [
-                [ 'label' => '@todo', 'url' => [ '/scaffold/to-do' ] ],
-                [ 'label' => '@foo', 'url' => [ '/scaffold/foo' ] ],
+                [ 'label' => '@todo', 'url' => [ '/scaffold/to-do/index' ] ],
+                [ 'label' => '@foo', 'url' => [ '/scaffold/foo/index' ] ],
             ],
             'options' => [
                 'class' => 'navbar-nav navbar-right',
