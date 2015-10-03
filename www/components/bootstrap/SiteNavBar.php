@@ -11,13 +11,14 @@ class SiteNavBar extends Widget
     public $brandLabelIcon = '<i class="glyphicon glyphicon-home"></i>';
     public $brandLabelFormat = '%s&nbsp;<span>%s</span>';
     public $navBarOptions = [
-        'class' => 'navbar-default navbar-fixed-top',
+        'class' => 'navbar-default',
     ];
 
     public function run()
     {
         NavBar::begin( [
             'brandLabel' => sprintf( $this->brandLabelFormat, $this->brandLabelIcon, $this->brandLabel ),
+            'innerContainerOptions' => [ 'class' => 'container-fluid' ],
             'options' => $this->navBarOptions,
         ] );
 

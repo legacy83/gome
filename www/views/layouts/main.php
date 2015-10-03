@@ -15,9 +15,9 @@
 
 <?php $this->beginBody(); ?>
 
-<?= \front\components\bootstrap\SiteNavBar::widget(); ?>
-
 <div class="container">
+
+    <?= \front\components\bootstrap\SiteNavBar::widget(); ?>
 
     <?= $content; ?>
 
