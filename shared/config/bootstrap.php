@@ -9,6 +9,7 @@ Yii::setAlias( 'shared', "{$base}/shared" );
 
 Yii::setAlias( 'front', "{$base}/www" );
 Yii::setAlias( 'back', "{$base}/admin" );
+Yii::setAlias( 'api', "{$base}/api" );
 Yii::setAlias( 'console', "{$base}/console" );
 
 /*
