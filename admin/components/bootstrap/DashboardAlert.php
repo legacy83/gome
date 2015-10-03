@@ -8,12 +8,13 @@ use yii\bootstrap\Alert;
 
 class DashboardAlert extends Widget
 {
+    public $flashKeys = [ 'success', 'info', 'warning', 'danger' ];
+
     public function run()
     {
-        $this->renderFlash( 'success' );
-        $this->renderFlash( 'info' );
-        $this->renderFlash( 'warning' );
-        $this->renderFlash( 'danger' );
+        foreach ( $this->flashKeys as $key ) {
+            $this->renderFlash( $key );
+        }
     }
 
     private function renderFlash( $key )
