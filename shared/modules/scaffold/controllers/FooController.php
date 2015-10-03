@@ -2,7 +2,7 @@
 
 namespace scaffold\controllers;
 
-use scaffold\models\Foo;
+use common\models\Foo;
 use yii\web\Controller;
 
 class FooController extends Controller
