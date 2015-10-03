@@ -70,16 +70,6 @@ $config = [
 
     ],
 
-    /*
-     * modules
-     */
-
-    'modules' => [
-        'common' => [
-            'class' => 'common\Module',
-        ],
-    ],
-
 ];
 
 return $config;
