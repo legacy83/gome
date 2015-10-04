@@ -24,7 +24,7 @@
     <hr>
 
     <footer>
-        <p>&copy; Gome <?php echo date( 'Y' ); ?></p>
+        <p>&copy; Gome <?= date( 'Y' ); ?></p>
     </footer>
 
 </div>
