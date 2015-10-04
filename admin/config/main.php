@@ -70,4 +70,14 @@ return [
 
     ],
 
+    /*
+     * modules
+     */
+
+    'modules' => [
+        'foo' => [
+            'class' => 'foo\Module',
+        ],
+    ],
+
 ];

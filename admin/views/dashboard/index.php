@@ -2,7 +2,7 @@
 <?php $this->title = 'Dashboard'; ?>
 
 <div class="page-header">
-    <h1><?= \yii\helpers\Html::encode($this->title) ?></h1>
+    <h1><?= \yii\helpers\Html::encode( $this->title ) ?></h1>
 </div>
 
 <div class="row">
