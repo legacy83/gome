@@ -6,5 +6,5 @@ use api\components\rest\ActiveController;
 
 class FooController extends ActiveController
 {
-    public $modelClass = 'common\models\Foo';
+    public $modelClass = 'foo\models\Foo';
 }

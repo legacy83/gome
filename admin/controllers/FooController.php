@@ -2,7 +2,7 @@
 
 namespace back\controllers;
 
-use common\models\Foo;
+use foo\models\Foo;
 use yii\web\Controller;
 
 class FooController extends Controller

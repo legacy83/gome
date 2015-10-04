@@ -1,5 +1,5 @@
 <?php /* @var $this yii\web\View */ ?>
-<?php /** @var $model common\models\Foo */ ?>
+<?php /** @var $model foo\models\Foo */ ?>
 <?php /** @var $models array */ ?>
 <?php $this->title = '@foo'; ?>
 
