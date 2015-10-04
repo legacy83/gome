@@ -1,6 +1,6 @@
 <?php
 
-$config = [
+return [
 
     'id' => 'console',
     'basePath' => dirname( __DIR__ ),
@@ -37,5 +37,3 @@ $config = [
     ],
 
 ];
-
-return $config;
