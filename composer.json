@@ -1,10 +1,26 @@
 {
   "name": "trsenna/gome",
   "description": "Gome is an advanced skeleton Yii2 application best for rapidly creating amazing and well done projects.",
+  "keywords": [
+    "yii2",
+    "framework",
+    "project template"
+  ],
+  "homepage": "https://github.com/trsenna/gome",
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/trsenna/gome/issues",
+    "source": "https://github.com/trsenna/gome"
+  },
+  "minimum-stability": "stable",
   "require": {
     "php": ">=5.5.9",
     "yiisoft/yii2": ">=2.0.6",
     "yiisoft/yii2-bootstrap": "*"
+  },
+  "require-dev": {
+    "yiisoft/yii2-debug": "*"
   },
   "extra": {
     "asset-installer-paths": {
