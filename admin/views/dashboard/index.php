@@ -1,8 +1,8 @@
 <?php /* @var $this yii\web\View */ ?>
-<?php $this->title = 'Gome Dashboard'; ?>
+<?php $this->title = 'Dashboard'; ?>
 
 <div class="page-header">
-    <h1>Dashboard</h1>
+    <h1><?= \yii\helpers\Html::encode($this->title) ?></h1>
 </div>
 
 <div class="row">
