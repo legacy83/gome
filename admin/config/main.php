@@ -1,6 +1,6 @@
 <?php
 
-$config = [
+return [
 
     'id' => 'back',
     'basePath' => dirname( __DIR__ ),
@@ -71,5 +71,3 @@ $config = [
     ],
 
 ];
-
-return $config;
