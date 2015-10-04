@@ -1,6 +1,6 @@
 <?php
 
-$config = [
+return [
 
     'id' => 'api',
     'basePath' => dirname( __DIR__ ),
@@ -75,5 +75,3 @@ $config = [
     ],
 
 ];
-
-return $config;
