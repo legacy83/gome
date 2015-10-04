@@ -17,3 +17,4 @@ Yii::setAlias( 'console', "{$base}/console" );
  */
 
 Yii::setAlias( 'foo', '@shared/modules/foo' );
+Yii::setAlias( 'todo', '@shared/modules/todo' );

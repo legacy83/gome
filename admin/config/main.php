@@ -78,6 +78,9 @@ return [
         'foo' => [
             'class' => 'foo\Module',
         ],
+        'todo' => [
+            'class' => 'todo\Module',
+        ],
     ],
 
 ];
