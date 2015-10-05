@@ -6,7 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
-class FooSearch extends Foo
+class FooCriteria extends Foo
 {
     public function rules()
     {
@@ -20,7 +20,7 @@ class FooSearch extends Foo
     {
         return Model::scenarios();
     }
-    
+
     public function search( $params )
     {
         $query = Foo::find();
