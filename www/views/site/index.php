@@ -1,5 +1,9 @@
-<?php /* @var $this yii\web\View */ ?>
-<?php $this->title = 'Gome'; ?>
+<?php
+
+/* @var $this yii\web\View */
+
+$this->title = 'Gome';
+?>
 
 <div class="jumbotron">
 

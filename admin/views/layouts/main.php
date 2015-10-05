@@ -1,7 +1,11 @@
-<?php /* @var $this \yii\web\View */ ?>
-<?php /* @var $content string */ ?>
-<?php \back\assets\DashboardAsset::register( $this ); ?>
-<?php $this->beginPage(); ?>
+<?php
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+
+\back\assets\DashboardAsset::register( $this );
+$this->beginPage();
+?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language; ?>">
 <head>
