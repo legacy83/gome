@@ -1,10 +1,15 @@
-<?php /* @var $this yii\web\View */ ?>
-<?php /** @var $model foo\models\Foo */ ?>
-<?php /** @var $models array */ ?>
-<?php $this->title = '@foo'; ?>
+<?php
+
+/* @var $this yii\web\View */
+/* @var $model foo\models\Foo */
+/* @var $models array */
+
+$this->title = '@foo';
+$this->params[ 'breadcrumbs' ][] = $this->title;
+?>
 
 <div class="page-header">
-    <h1><?= \yii\helpers\Html::encode( $this->title ) ?></h1>
+    <h1><?= \yii\helpers\Html::encode( $this->title ); ?></h1>
 </div>
 
 <div class="row">
@@ -58,7 +63,8 @@
 
                 <div class="pull-right">
 
-                    <a class="btn btn-primary" href="<?= \yii\helpers\Url::toRoute( [ '/foo/foo/create' ] ); ?>">New @foo</a>
+                    <a class="btn btn-primary" href="<?= \yii\helpers\Url::toRoute( [ '/foo/foo/create' ] ); ?>">New
+                        @foo</a>
 
                 </div>
 

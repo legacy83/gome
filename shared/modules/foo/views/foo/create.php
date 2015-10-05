@@ -1,8 +1,14 @@
-<?php /* @var $this yii\web\View */ ?>
-<?php $this->title = 'New @foo'; ?>
+<?php
+
+/* @var $this yii\web\View */
+
+$this->title = 'New @foo';
+$this->params[ 'breadcrumbs' ][] = [ 'label' => '@foo', 'url' => [ '/foo/foo/index' ] ];
+$this->params[ 'breadcrumbs' ][] = $this->title;
+?>
 
 <div class="page-header">
-    <h1><?= \yii\helpers\Html::encode( $this->title ) ?></h1>
+    <h1><?= \yii\helpers\Html::encode( $this->title ); ?></h1>
 </div>
 
 <form action="<?= \yii\helpers\Url::toRoute( [ '/foo/foo/create' ] ); ?>" method="post" class="form-horizontal">

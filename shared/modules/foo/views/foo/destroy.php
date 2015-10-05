@@ -1,9 +1,16 @@
-<?php /* @var $this yii\web\View */ ?>
-<?php /** @var $model foo\models\Foo */ ?>
-<?php $this->title = 'Destroy @foo'; ?>
+<?php
+
+/* @var $this yii\web\View */
+/* @var $model foo\models\Foo */
+
+$this->title = 'Destroy @foo';
+$this->params[ 'breadcrumbs' ][] = [ 'label' => '@foo', 'url' => [ '/foo/foo/index' ] ];
+$this->params[ 'breadcrumbs' ][] = [ 'label' => $model->id, 'url' => [ '/foo/foo/show', 'id' => $model->id ] ];
+$this->params[ 'breadcrumbs' ][] = $this->title;
+?>
 
 <div class="page-header">
-    <h1><?= \yii\helpers\Html::encode( $this->title ) ?></h1>
+    <h1><?= \yii\helpers\Html::encode( $this->title ); ?></h1>
 </div>
 
 <form action="<?= \yii\helpers\Url::toRoute( [ '/foo/foo/destroy' ] ); ?>" method="post">
