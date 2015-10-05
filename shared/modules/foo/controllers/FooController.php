@@ -4,18 +4,19 @@ namespace foo\controllers;
 
 use Yii;
 use foo\models\Foo;
-use foo\models\FooCriteria;
+use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 
 class FooController extends Controller
 {
     public function actionIndex()
     {
-        $searchCriteria = new FooCriteria();
-        $dataProvider = $searchCriteria->search( Yii::$app->request->queryParams );
+        $query = Foo::find();
+        $dataProvider = new ActiveDataProvider( [
+            'query' => $query,
+        ] );
 
         return $this->render( 'index', [
-            'searchCriteria' => $searchCriteria,
             'dataProvider' => $dataProvider,
         ] );
     }

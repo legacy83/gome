@@ -1,23 +1,21 @@
 <?php
 
 /* @var $this yii\web\View */
-/* @var $searchCriteria foo\models\FooCriteria */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = '@foo';
-$this->params[ 'breadcrumbs' ][] = $this->title;
+$this->params[ 'breadcrumbs' ][ ] = $this->title;
 ?>
+
+<div class="page-header">
+    <h1><?= \yii\helpers\Html::encode( $this->title ); ?></h1>
+</div>
 
 <div class="row">
     <div class="col-md-12">
 
-        <div class="page-header">
-            <h1><?= \yii\helpers\Html::encode( $this->title ); ?></h1>
-        </div>
-
         <?= \yii\grid\GridView::widget( [
             'dataProvider' => $dataProvider,
-            'filterModel' => $searchCriteria,
             'columns' => [
                 'id',
                 'one',
