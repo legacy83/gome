@@ -2,15 +2,21 @@
 
 namespace foo\controllers;
 
+use Yii;
 use foo\models\Foo;
+use foo\models\FooCriteria;
 use yii\web\Controller;
 
 class FooController extends Controller
 {
     public function actionIndex()
     {
+        $searchCriteria = new FooCriteria();
+        $dataProvider = $searchCriteria->search( Yii::$app->request->queryParams );
+
         return $this->render( 'index', [
-            'models' => Foo::find()->all(),
+            'searchCriteria' => $searchCriteria,
+            'dataProvider' => $dataProvider,
         ] );
     }
 
