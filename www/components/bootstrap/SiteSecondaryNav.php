@@ -15,7 +15,7 @@ class SiteSecondaryNav extends Widget
     {
         echo Nav::widget( [
             'items' => [
-                [ 'label' => '@todo', 'url' => [ '/todo/index' ] ],
+                [ 'label' => '@todo', 'url' => [ '/todo/todo/index' ] ],
             ],
             'options' => $this->navOptions,
         ] );
