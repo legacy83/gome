@@ -3,7 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $model foo\models\Foo */
 
-$this->title = 'Show @foo';
+$this->title = 'View @foo';
 $this->params[ 'breadcrumbs' ][ ] = [ 'label' => '@foo', 'url' => [ 'index' ] ];
 $this->params[ 'breadcrumbs' ][ ] = $this->title;
 ?>
@@ -13,7 +13,8 @@ $this->params[ 'breadcrumbs' ][ ] = $this->title;
 </div>
 
 <div class="row">
-    <div class="col-md-12">
+
+    <div class="col-md-8">
 
         <?= \yii\widgets\DetailView::widget( [
             'model' => $model,
@@ -23,20 +24,46 @@ $this->params[ 'breadcrumbs' ][ ] = $this->title;
                 'two',
                 'three',
             ],
-        ] ) ?>
-
-        <p>
-            <?= \yii\helpers\Html::a( 'Update', [ 'update', 'id' => $model->id ], [ 'class' => 'btn btn-primary' ] ) ?>
-            <?= \yii\helpers\Html::a( 'Delete', [ 'delete', 'id' => $model->id ], [
-                'class' => 'btn btn-danger',
-                'data' => [
-                    'confirm' => 'Are you sure you want to delete this item?',
-                    'method' => 'post',
-                ],
-            ] ) ?>
-        </p>
-
+        ] ); ?>
 
     </div>
-    <!-- .col-md-12 -->
+    <!-- .col-md-8 -->
+
+    <div class="col-md-4">
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <div class="pull-left"></div>
+                <!-- .pull-left -->
+
+                <div class="pull-right">
+                    <?= \yii\helpers\Html::a( 'Cancel', [ 'index' ], [ 'class' => 'btn btn-default' ] ); ?>
+                    <?= \yii\helpers\Html::a( 'Edit', [ 'update', 'id' => $model->id ], [ 'class' => 'btn btn-primary' ] ); ?>
+                </div>
+                <!-- .pull-right -->
+
+            </div>
+            <!-- .panel-body -->
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    Would you like to delete @foo?
+                    <?= \yii\helpers\Html::a( 'Yes!', [ 'delete', 'id' => $model->id ], [
+                        'class' => 'text-danger',
+                        'data' => [
+                            'confirm' => 'Are you sure you want to delete this item?',
+                            'method' => 'post',
+                        ],
+                    ] ); ?>
+                </li>
+            </ul>
+            <!-- .list-group -->
+
+        </div>
+        <!-- .panel .panel-default -->
+
+    </div>
+    <!-- .col-md-4 -->
+
 </div><!-- .row -->
