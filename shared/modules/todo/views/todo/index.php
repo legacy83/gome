@@ -1,6 +1,10 @@
-<?php /* @var $this yii\web\View */ ?>
-<?php $this->title = '@todo'; ?>
-<?php $this->params[ 'breadcrumbs' ][] = $this->title; ?>
+<?php
+
+/* @var $this yii\web\View */
+
+$this->title = '@todo';
+$this->params[ 'breadcrumbs' ][ ] = $this->title;
+?>
 
 <div class="page-header">
     <h1><?= \yii\helpers\Html::encode( $this->title ); ?></h1>
