@@ -38,7 +38,7 @@ $this->params[ 'breadcrumbs' ][ ] = $this->title;
                 <!-- .pull-left -->
 
                 <div class="pull-right">
-                    <?= \yii\helpers\Html::a( 'Cancel', [ 'index' ], [ 'class' => 'btn btn-default' ] ); ?>
+                    <?= \yii\helpers\Html::a( 'Back', [ 'index' ], [ 'class' => 'btn btn-default' ] ); ?>
                     <?= \yii\helpers\Html::a( 'Edit', [ 'update', 'id' => $model->id ], [ 'class' => 'btn btn-primary' ] ); ?>
                 </div>
                 <!-- .pull-right -->
