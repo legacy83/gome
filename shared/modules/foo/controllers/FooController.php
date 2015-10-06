@@ -5,10 +5,32 @@ namespace foo\controllers;
 use Yii;
 use foo\models\Foo;
 use yii\data\ActiveDataProvider;
+use yii\filters\VerbFilter;
 use yii\web\Controller;
+use yii\web\NotFoundHttpException;
 
+/**
+ * FooController implements the CRUD actions for Foo model.
+ */
 class FooController extends Controller
 {
+    public function behaviors()
+    {
+        return [
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'delete' => [ 'post' ],
+                ],
+            ],
+        ];
+    }
+
+    /**
+     * Lists all Foo models.
+     *
+     * @return mixed
+     */
     public function actionIndex()
     {
         $query = Foo::find();
@@ -21,70 +43,90 @@ class FooController extends Controller
         ] );
     }
 
-    public function actionShow()
+    /**
+     * Displays a single Foo model.
+     *
+     * @param integer $id
+     *
+     * @return mixed
+     */
+    public function actionView( $id )
     {
-        $request = \Yii::$app->request;
-
-        return $this->render( 'show', [
-            'model' => Foo::findOne( $request->get( 'id' ) ),
+        return $this->render( 'view', [
+            'model' => $this->findModel( $id ),
         ] );
     }
 
+    /**
+     * Creates a new Foo model.
+     * If creation is successful, the browser will be redirected to the 'view' page.
+     *
+     * @return mixed
+     */
     public function actionCreate()
     {
-        $request = \Yii::$app->request;
-        $session = \Yii::$app->session;
-
-        if ( $request->post( 'createSubmitCreate' ) ) {
-            $session->addFlash( 'success', '@foo created successfully' );
-
-            return $this->redirect( [ '/foo' ] );
+        $model = new Foo();
+        if ( $model->load( Yii::$app->request->post() ) && $model->save() ) {
+            Yii::$app->session->addFlash( 'success', '@foo created successfully' );
+            return $this->redirect( [ 'view', 'id' => $model->id ] );
+        } else {
+            return $this->render( 'create', [
+                'model' => $model,
+            ] );
         }
-
-        if ( $request->post( 'createSubmitCancel' ) ) {
-            return $this->redirect( [ '/foo' ] );
-        }
-
-        return $this->render( 'create' );
     }
 
-    public function actionEdit()
+    /**
+     * Updates an existing Foo model.
+     * If update is successful, the browser will be redirected to the 'view' page.
+     *
+     * @param integer $id
+     *
+     * @return mixed
+     */
+    public function actionUpdate( $id )
     {
-        $request = \Yii::$app->request;
-        $session = \Yii::$app->session;
-
-        if ( $request->post( 'editSubmitSave' ) ) {
-            $session->addFlash( 'success', '@foo modified successfully' );
-
-            return $this->redirect( [ '/foo' ] );
+        $model = $this->findModel( $id );
+        if ( $model->load( Yii::$app->request->post() ) && $model->save() ) {
+            Yii::$app->session->addFlash( 'success', '@foo modified successfully' );
+            return $this->redirect( [ 'view', 'id' => $model->id ] );
+        } else {
+            return $this->render( 'update', [
+                'model' => $model,
+            ] );
         }
-
-        if ( $request->post( 'editSubmitCancel' ) ) {
-            return $this->redirect( [ '/foo' ] );
-        }
-
-        return $this->render( 'edit', [
-            'model' => Foo::findOne( $request->get( 'id' ) ),
-        ] );
     }
 
-    public function actionDestroy()
+    /**
+     * Deletes an existing Foo model.
+     * If deletion is successful, the browser will be redirected to the 'index' page.
+     *
+     * @param integer $id
+     *
+     * @return mixed
+     */
+    public function actionDelete( $id )
     {
-        $request = \Yii::$app->request;
-        $session = \Yii::$app->session;
+        $this->findModel( $id )->delete();
+        Yii::$app->session->addFlash( 'success', '@foo destroyed successfully' );
+        return $this->redirect( [ 'index' ] );
+    }
 
-        if ( $request->post( 'destroySubmitYes' ) ) {
-            $session->addFlash( 'success', '@foo destroyed successfully' );
-
-            return $this->redirect( [ '/foo' ] );
+    /**
+     * Finds the Foo model based on its primary key value.
+     * If the model is not found, a 404 HTTP exception will be thrown.
+     *
+     * @param integer $id
+     *
+     * @return Foo the loaded model
+     * @throws NotFoundHttpException if the model cannot be found
+     */
+    private function findModel( $id )
+    {
+        if ( ( $model = Foo::findOne( $id ) ) !== NULL ) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException( 'The requested page does not exist.' );
         }
-
-        if ( $request->post( 'destroySubmitNo' ) ) {
-            return $this->redirect( [ '/foo' ] );
-        }
-
-        return $this->render( 'destroy', [
-            'model' => Foo::findOne( $request->get( 'id' ) ),
-        ] );
     }
 }

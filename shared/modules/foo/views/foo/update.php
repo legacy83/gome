@@ -3,8 +3,9 @@
 /* @var $this yii\web\View */
 /* @var $model foo\models\Foo */
 
-$this->title = 'New @foo';
+$this->title = 'Edit @foo';
 $this->params[ 'breadcrumbs' ][ ] = [ 'label' => '@foo', 'url' => [ '/foo/foo/index' ] ];
+$this->params[ 'breadcrumbs' ][ ] = [ 'label' => $model->id, 'url' => [ '/foo/foo/show', 'id' => $model->id ] ];
 $this->params[ 'breadcrumbs' ][ ] = $this->title;
 ?>
 
@@ -21,7 +22,7 @@ $this->params[ 'breadcrumbs' ][ ] = $this->title;
         <?= $form->field( $model, 'three' )->textInput( [ 'maxlength' => TRUE ] ) ?>
 
         <div class="form-group">
-            <?= \yii\helpers\Html::submitButton( 'Create', [ 'class' => 'btn btn-primary' ] ) ?>
+            <?= \yii\helpers\Html::submitButton( 'Update', [ 'class' => 'btn btn-primary' ] ) ?>
         </div>
 
         <?php \yii\bootstrap\ActiveForm::end(); ?>
