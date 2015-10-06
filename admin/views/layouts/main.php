@@ -23,8 +23,6 @@ $this->beginPage();
 
 <div class="container">
 
-    <?= \back\components\bootstrap\DashboardBreadcrumbs::widget(); ?>
-
     <?= \back\components\bootstrap\DashboardAlert::widget(); ?>
 
     <?= $content; ?>
