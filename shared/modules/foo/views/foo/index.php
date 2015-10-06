@@ -26,7 +26,7 @@ $this->params[ 'breadcrumbs' ][ ] = $this->title;
         ] ); ?>
 
         <div class="pull-right">
-            <p><?= \yii\helpers\Html::a( 'New @foo', [ 'create' ], [ 'class' => 'btn btn-primary' ] ) ?></p>
+            <?= \yii\helpers\Html::a( 'New @foo', [ 'create' ], [ 'class' => 'btn btn-primary' ] ); ?>
         </div>
 
     </div>
