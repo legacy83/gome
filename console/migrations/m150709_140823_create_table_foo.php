@@ -12,8 +12,8 @@ class m150709_140823_create_table_foo extends Migration
             'one' => $this->string()->notNull(),
             'two' => $this->string()->notNull(),
             'three' => $this->string()->notNull(),
-            'four' => $this->string(),
-            'five' => $this->text(),
+            'four' => $this->integer()->defaultValue( 0 ),
+            'five' => $this->text()->defaultValue( NULL ),
         ] );
     }
 

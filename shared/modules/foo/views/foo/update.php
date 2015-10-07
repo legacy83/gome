@@ -4,9 +4,9 @@
 /* @var $model foo\models\Foo */
 
 $this->title = 'Edit @foo';
-$this->params[ 'breadcrumbs' ][ ] = [ 'label' => '@foo', 'url' => [ 'index' ] ];
-$this->params[ 'breadcrumbs' ][ ] = [ 'label' => $model->id, 'url' => [ 'view', 'id' => $model->id ] ];
-$this->params[ 'breadcrumbs' ][ ] = $this->title;
+$this->params[ 'breadcrumbs' ][] = [ 'label' => '@foo', 'url' => [ 'index' ] ];
+$this->params[ 'breadcrumbs' ][] = [ 'label' => $model->id, 'url' => [ 'view', 'id' => $model->id ] ];
+$this->params[ 'breadcrumbs' ][] = $this->title;
 ?>
 
     <div class="page-header">
@@ -22,6 +22,8 @@ $this->params[ 'breadcrumbs' ][ ] = $this->title;
             <?= $form->field( $model, 'one' )->textInput( [ 'maxlength' => TRUE ] ); ?>
             <?= $form->field( $model, 'two' )->textInput( [ 'maxlength' => TRUE ] ); ?>
             <?= $form->field( $model, 'three' )->textInput( [ 'maxlength' => TRUE ] ); ?>
+            <?= $form->field( $model, 'four' )->dropDownList( [ 'none', 'other', 'another' ] ); ?>
+            <?= $form->field( $model, 'five' )->textarea( [ 'rows' => 6 ] ); ?>
 
         </div>
         <!-- .col-md-8 -->

@@ -23,6 +23,8 @@ $this->params[ 'breadcrumbs' ][ ] = $this->title;
                 'one',
                 'two',
                 'three',
+                'four',
+                'five',
             ],
         ] ); ?>
 
