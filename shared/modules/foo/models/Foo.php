@@ -11,6 +11,8 @@ use yii\db\ActiveRecord;
  * @property string  $one
  * @property string  $two
  * @property string  $three
+ * @property integer $four
+ * @property string  $five
  */
 class Foo extends ActiveRecord
 {
@@ -22,9 +24,10 @@ class Foo extends ActiveRecord
     public function rules()
     {
         return [
-            [['one', 'two', 'three'], 'required'],
-            [['five'], 'string'],
-            [['one', 'two', 'three', 'four'], 'string', 'max' => 255]
+            [ [ 'one', 'two', 'three' ], 'required' ],
+            [ [ 'four' ], 'integer' ],
+            [ [ 'five' ], 'string' ],
+            [ [ 'one', 'two', 'three' ], 'string', 'max' => 255 ]
         ];
     }
 
@@ -38,5 +41,10 @@ class Foo extends ActiveRecord
             'four' => 'Four',
             'five' => 'Five',
         ];
+    }
+
+    static public function fourOptions()
+    {
+        return [ 'none', 'other', 'another' ];
     }
 }

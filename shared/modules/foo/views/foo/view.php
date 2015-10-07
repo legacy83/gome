@@ -4,8 +4,8 @@
 /* @var $model foo\models\Foo */
 
 $this->title = 'View @foo';
-$this->params[ 'breadcrumbs' ][ ] = [ 'label' => '@foo', 'url' => [ 'index' ] ];
-$this->params[ 'breadcrumbs' ][ ] = $this->title;
+$this->params[ 'breadcrumbs' ][] = [ 'label' => '@foo', 'url' => [ 'index' ] ];
+$this->params[ 'breadcrumbs' ][] = $this->title;
 ?>
 
 <div class="page-header">
@@ -23,7 +23,7 @@ $this->params[ 'breadcrumbs' ][ ] = $this->title;
                 'one',
                 'two',
                 'three',
-                'four',
+                [ 'attribute' => 'four', 'value' => \foo\models\Foo::fourOptions()[ $model->four ] ],
                 'five',
             ],
         ] ); ?>
