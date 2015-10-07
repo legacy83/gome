@@ -22,7 +22,9 @@ class Foo extends ActiveRecord
     public function rules()
     {
         return [
-            [ [ 'one', 'two', 'three' ], 'string', 'max' => 255 ]
+            [['one', 'two', 'three'], 'required'],
+            [['five'], 'string'],
+            [['one', 'two', 'three', 'four'], 'string', 'max' => 255]
         ];
     }
 
@@ -33,6 +35,8 @@ class Foo extends ActiveRecord
             'one' => 'One',
             'two' => 'Two',
             'three' => 'Three',
+            'four' => 'Four',
+            'five' => 'Five',
         ];
     }
 }

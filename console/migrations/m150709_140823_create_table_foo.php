@@ -8,10 +8,12 @@ class m150709_140823_create_table_foo extends Migration
     public function up()
     {
         $this->createTable( 'foo', [
-            'id' => Schema::TYPE_PK,
-            'one' => Schema::TYPE_STRING,
-            'two' => Schema::TYPE_STRING,
-            'three' => Schema::TYPE_STRING,
+            'id' => $this->primaryKey(),
+            'one' => $this->string()->notNull(),
+            'two' => $this->string()->notNull(),
+            'three' => $this->string()->notNull(),
+            'four' => $this->string(),
+            'five' => $this->text(),
         ] );
     }
 
