@@ -42,9 +42,4 @@ class Foo extends ActiveRecord
             'five' => 'Five',
         ];
     }
-
-    static public function fourOptions()
-    {
-        return [ 'none', 'other', 'another' ];
-    }
 }

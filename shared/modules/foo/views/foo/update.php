@@ -22,7 +22,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
             <?= $form->field( $model, 'one' )->textInput( [ 'maxlength' => TRUE ] ); ?>
             <?= $form->field( $model, 'two' )->textInput( [ 'maxlength' => TRUE ] ); ?>
             <?= $form->field( $model, 'three' )->textInput( [ 'maxlength' => TRUE ] ); ?>
-            <?= $form->field( $model, 'four' )->dropDownList( \foo\models\Foo::fourOptions() ); ?>
+            <?= $form->field( $model, 'four' )->dropDownList( \foo\models\FooType::options() ); ?>
             <?= $form->field( $model, 'five' )->textarea( [ 'rows' => 6 ] ); ?>
 
         </div>

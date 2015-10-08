@@ -23,7 +23,7 @@ $this->params[ 'breadcrumbs' ][] = $this->title;
                 'one',
                 'two',
                 'three',
-                [ 'attribute' => 'four', 'value' => \foo\models\Foo::fourOptions()[ $model->four ] ],
+                [ 'attribute' => 'four', 'value' => \foo\models\FooType::options()[ $model->four ] ],
                 'five',
             ],
         ] ); ?>
