@@ -22,7 +22,7 @@
   become_user: vagrant
 
 - name: Setup | Composer Install
-  composer: command=install working_dir=/vagrant
+  composer: command=install no_dev=no working_dir=/vagrant
   become_user: vagrant
   notify:
       - yii2 | migrate
