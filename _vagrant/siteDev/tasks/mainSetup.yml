@@ -21,6 +21,10 @@
   composer: command=install working_dir=/vagrant
   become_user: vagrant
 
+- name: Setup | Yii2 Migrate
+  command: /vagrant/console/yii migrate --interactive=0
+  become_user: vagrant
+
 # Setup | apache2 under vagrant user/group
 # ----------------------------------------
 
