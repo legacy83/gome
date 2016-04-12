@@ -1,0 +1,6 @@
+---
+# tasks file for gomeLAMP
+
+- include: mainApache2.yml
+- include: mainMySQL.yml
+- include: mainPHP.yml
