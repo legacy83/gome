@@ -1,0 +1,7 @@
+---
+# handlers file for siteDev
+
+- name: yii2 | migrate
+  command: /vagrant/console/yii migrate --interactive=0
+  become_user: vagrant
+
