@@ -13,6 +13,10 @@
 # Setup | build and make the application available
 # ------------------------------------------------
 
+- name: Setup | Require Composer Asset Plugin
+  command: composer --no-interaction global require "fxp/composer-asset-plugin:1.1.3"
+  become_user: vagrant
+
 - name: Setup | Composer Install
   composer: command=install working_dir=/vagrant
   become_user: vagrant

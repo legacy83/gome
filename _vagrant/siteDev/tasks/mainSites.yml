@@ -46,6 +46,6 @@
 
 - name: Sites | Link WordPress Application
   file:
-    src: /vagrant/www
+    src: /vagrant/www/web
     dest: /var/www/www.192.168.27.14.xip.io/public_html
     state: link
